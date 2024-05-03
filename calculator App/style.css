@@ -1,0 +1,101 @@
+:root{
+    ---bg-color:#dfdfd4;
+    ---display-color:#0e0e0e;
+    ---primary-color:#333333;
+    ---light-color:#f0d5b4;
+    ---dark-color:#f0d9bf;
+    ---btn-light-primary:#f78731;
+    ---btn-dark-primary:#db5b00;
+    ---btn-light-secondry:#acabaa;
+    ---btn-dark-secondry:#d5d2cf;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+/*
+font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+ font-family: 'Poppins', sans-serif;
+*/
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(---bg-color);
+    /* background-image: url(https://img.freepik.com/free-vector/flat-comic-style-background_23-2148882944.jpg?w=1060&t=st=1714742059~exp=1714742659~hmac=4b525274b9402844d8015f48a68a9c87e077a0dce12799158008a5c4ed815dd5); */
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+.main .calc-card{
+    width: 320px;
+   
+    height: 501px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.calc-card .top{
+    width: 100%;
+    height: 100px;
+    background-color: var(---display-color);
+}
+.top input {
+    width: 100%;
+    height: 100%;
+    background-color:var(---display-color);
+    color: var(---btn-light-secondry);
+    outline: none;
+    font-size: 2.4rem;
+    border: none;
+    padding: 1rem 1.2rem;
+}
+.calc-card .btn-container{
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+}
+/* span {
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color:var(---dark-color);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+} */
+.btn-container .calc-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calc-btn button{
+    width: 100%;
+    height: 5rem;
+    background-color: var(---btn-light-secondry);
+    /* background: linear-gradient(90deg, rgba(172,171,170,1) 0%, rgba(213,210,207,1) 60%); */
+    color: var(---primary-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border: 1.5px solid var(---primary-color);
+}
+.btn-main{
+    flex-basis: 650px;
+    /* background-color: var(---light-color) !important; */
+    box-shadow: 5px -5px 30px 38px rgba(240,217,191,1) inset !important;
+-webkit-box-shadow: 5px -5px 30px 38px rgba(240,217,191,1) inset !important;
+-moz-box-shadow: 5px -5px 30px 38px rgba(240,217,191,1) inset !important;
+}
+.btn-orange{
+    background-color: var(---btn-light-primary) !important;
+}
