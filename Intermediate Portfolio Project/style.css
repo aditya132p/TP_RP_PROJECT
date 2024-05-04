@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sacramento&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Merriweather';
+    scroll-behavior: smooth;
+}
+
+:root{
+	--primary-color: #d5def5; 
+	--secondary-color: #8594e4; 
+	--normal-color: #6643b5; 
+	--dark-color: #430f58; 
+}
+/*
+font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+ font-family: 'Poppins', sans-serif;
+*/
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color:var(--primary-color);
+    overflow: hidden;
+    position: relative;
+}
+.main .hero{
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    background-color: var(--normal-color);
+}
+.hero .cloud-1 , .cloud-2 {
+    position: absolute;
+     animation: cloud 5s infinite ;
+}
+.hero .cloud-1{
+    top:60px;
+    left:70%;
+    
+}
+article{
+   margin: auto;
+   max-width: 600px;
+   padding: 2rem 3rem;
+}
+.right-col{
+   animation-name: round;
+   animation-duration: 600ms;
+    
+    display :flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+article a{
+   padding: 10px;
+   font-size: 1rem;
+   text-decoration: none;
+   color: var(--primary-color);
+   background-color: #6643b5;
+   border-radius: 1rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero .cloud-2{
+    top:340px;
+    left:20%;
+   
+}
+.mountain {
+   max-width: 80vw;
+   min-width: 300px;
+   
+}
+
+
+.hero .text-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 100px;
+    color: var(--primary-color);
+    position: relative;
+    height: 350px;
+}
+ .text-center h1 {
+    cursor: initial;
+  font-size:clamp(2rem ,4.5rem , 10vw);
+  font-family: "Sacramento", cursive;
+  transition: 0.3s ease;
+  
+}
+.text-center h1:hover{
+   text-shadow: 20px 50px 6px var(--dark-color);
+}
+ h2{
+    
+   font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding-bottom: 10px;
+ }
+ .nav{
+   position: fixed;
+   bottom:1rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--primary-color);
+ }
+ .nav-item{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   gap: 2rem;
+   padding: 20px;
+   z-index: 20;
+   backdrop-filter: blur(14px) saturate(200%);
+   -webkit-backdrop-filter: blur(14px) saturate(200%);
+   background-color: rgba(17, 25, 40, 0.43);
+   border-radius: 12px;
+   border: 1px solid rgba(255, 255, 255, 0.125);
+ }
+ .nav-item li a{
+   text-decoration: none;
+   color: var(--primary-color);
+   font-family: "Montserrat", sans-serif;
+   transition: all 0.3s ease;
+ }
+ .nav-item li a:hover{
+   
+   color: #430f58;
+
+ }
+
+ .about{
+    padding-top: 150px;
+    width: 100%;
+    min-height: 80vh;
+    
+ }
+ .about img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+ }
+ .about h3{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: var(--normal-color);
+    padding: 2rem 1rem;
+
+ }
+ .about p{
+    width: 30%;
+    margin: auto;
+
+ }
+ .skill{
+    width: 100%;
+    padding-top: 100px;
+ }
+ .skill h2{
+    color: var(--normal-color);
+ }
+ .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    width: 60%;
+    align-items: center;
+    margin: 100px auto 0 auto;
+    text-align: left;
+    row-gap: 2rem;
+ }
+ .grid{
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
+   gap: 2rem 0rem;
+ }
+ .grid img{
+    width: 200px;
+ }
+ .grid h4{
+    font-size: 1.2rem;
+    color: var(--normal-color);
+ }
+
+ .contact {
+    width: 100%;
+    padding: 150px 0rem;
+ }
+
+ .contact h1{
+    font-size: 2rem;
+   color:var(--normal-color);
+   font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+ }
+ .contact h5{
+    font-size: 1.3rem;
+    color: var(--normal-color);
+    font-weight: 700;
+    padding: 2.5rem 1rem;
+ }
+ .contact p{
+    width: 30%;
+    margin: auto;
+    padding: 2rem 0rem;
+ }
+ .contact button{
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    font-weight: normal;
+    background-color: var(--normal-color);
+    border-radius: 10px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+ }
+ .contact button:hover{
+   background-color:var(--dark-color);
+   scale: 1.01;
+ }
+ .footer{
+    width: 100%;
+    height: 30vh;
+    /* background-color: var(--dark-color); */
+    background-image: url(./assets/images/wave\ \(1\).svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+    color:var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem ;
+   
+ }
+ .footer a{
+    padding: 1rem ;
+    position: relative;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 1.3s ease;
+ }
+ .footer a::before{
+   content: "";
+   position: absolute;
+   bottom: 15px;
+   width: calc(10% - 2rem) ;
+   border-radius: 20px;
+   height: 2px ;
+   background-color: #d5def5;
+  overflow: hidden;
+  pointer-events: none;
+  /* transform: translateX(-10px); */
+ opacity: 0;
+  transition: all 0.3s ease;
+    
+ }
+ .footer a:hover::before{
+   opacity: 1;
+   
+   width: calc(100% - 2rem) ;
+ 
+}
+
+
+ @keyframes cloud {
+   0%{
+   }
+   50%{
+ left: 600px;
+   }
+   100%{
+
+   }
+ }
+ 
+@media (min-width:500px) and (max-width:900px) {
+ .hero .cloud-2 {
+    top: 320px;
+    left: 10%;
+}
+   .about p {
+    width: 60%;
+    
+}
+h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+article {
+    display: none;
+}
+.grid-container {
+    width: 80%;
+    row-gap: 2.5rem;
+}
+.contact p {
+    width: 60%;
+}
+}
+@media (max-width:499px) {
+   .hero .cloud-2 {
+    top: 330px;
+    left: 5%;
+}
+.hero .cloud-1 {
+    top: 50px;
+    left: 65%;
+}
+.hero .text-center {
+    padding-top: 140px;  
+}
+ .about p {
+    width: 90%;
+    
+}
+.skill h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+article {
+    display: none;
+}
+.grid-container {
+    display: block;
+    width: 100%;
+    margin: 100px auto 0 auto;
+    text-align: left;
+    row-gap: 2rem;
+    padding: 2rem 3rem;
+}
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.7rem 0rem;
+}
+.contact {
+    width: 100%;
+    padding: 100px 0rem;
+}
+.contact p {
+    width: 80%;
+}
+@keyframes cloud {
+   0%{
+   }
+   50%{
+ left: 30%;
+   }
+   100%{
+
+   }
+ }
+}
+  
+
